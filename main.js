@@ -39,3 +39,16 @@ function makeCall() {
    			}
    		}
    }
+   
+   $("#container").delegate("div", "click", function(){
+       //does what I need it to
+       console.log("You clicked an entry");
+       //for the life of me I can't figure out how to work with this other than use innerHTML
+       var text = this.innerHTML;
+       //so I'll have to do some string manipulation
+       var title = text.substring(text.indexOf('title') + 7, text.indexOf("</"));
+       console.log(title);
+       window.open("https://en.wikipedia.org/wiki/" + title);
+   });
+   
+   
