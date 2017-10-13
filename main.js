@@ -40,6 +40,7 @@ function makeCall() {
    		}
    }
    
+   //using delegate so that when an entry is added a function is added to it as well
    $("#container").delegate("div", "click", function(){
        //does what I need it to
        console.log("You clicked an entry");
